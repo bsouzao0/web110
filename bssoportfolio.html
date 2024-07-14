@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Set metadata of the document -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-sclae=1" />
+   <title>Brenda Sayonara Souza Oliveira</title>
+   <link href="bsso-formating.css" rel="stylesheet" /><!-- Link to formatting CSS file -->
+   <link href="bsso-layout.css" rel="stylesheet" /><!-- Link to layout CSS file -->
+    <script>
+        // Function to display current date and time and countdown to December 10th
+        function showClock() {
+            // Store the current date and time
+            var thisDay = new Date();
+            var localDate = thisDay.toLocaleDateString();
+            var localTime = thisDay.toLocaleTimeString();
+
+            // Display the current date and time
+            document.getElementById("currentTime").innerHTML =
+                "<span>Current Date: " + localDate + "</span><br><span>Current Time: " + localTime + "</span>";
+
+            var dec10Date = nextDec10(thisDay);
+            dec10Date.setHours(21); // Set the countdown time to 9 p.m.
+
+            // Calculate the days, hours, minutes, and seconds until December 10th at 9 p.m.
+            var distance = dec10Date - thisDay;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24)); // Math method
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the time left until December 10th at 9 p.m.
+            document.getElementById("countdown").innerHTML =
+                "<h4>December 10th at 9 p.m.</h4>" +
+                "<div>" +
+                days + " days " +
+                hours + " hours " +
+                minutes + " minutes " +
+                seconds + " seconds" +
+                "</div>";
+
+            // Update the countdown every second
+            setTimeout(showClock, 1000);
+        }
+
+        // Function to calculate the next December 10th date
+        function nextDec10(currentDate) {
+            var nextDec10 = new Date(currentDate.getFullYear(), 11, 10);
+            if (currentDate.getMonth() === 11 && currentDate.getDate() > 10) {
+                nextDec10.setFullYear(nextDec10.getFullYear() + 1);
+            }
+            return nextDec10;
+        }
+
+        // Function to show alert that the page is not ready
+        window.onload = function() {
+            // Alert that the page is not ready
+            window.alert("I am sorry.  This page is not ready yet.");
+
+            // Call showClock function to display current time and countdown
+            showClock();
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <!-- Header section -->
+        <img src="perfil.png" alt="Profile Picture" /> <!-- Inline image -->
+        <h1>Brenda Sayonara Souza Oliveira</h1>
+        <div>
+            <ul>
+                <li>IT Student | Full Stack Programming</li>
+                <li>Cloud & Virtualization Tech</li>
+            </ul>
+        </div>
+        <nav>
+            <!-- Navigation list with hypertext links -->
+            <ul>
+                <li><a href="bssohome.html">Home</a></li>
+                <li><a href="bssoresume.html">Resume</a></li>
+                <li><a href="bssoportfolio.html">Portfolio</a></li>
+                <li><a href="bssocontact.html">Contact</a></li>
+            </ul>
+        </nav>       
+    </header>
+
+    <section>
+        <h3>Work in Progress - This is my first website, so future projects will be added here on</h3>
+    <div class="countdown" id="countdown"></div> <!-- Display countdown -->
+    <div class="current-time" id="currentTime"></div> <!-- Display current time -->
+	</section>
+	
+    <footer>
+        <!-- Footer section -->
+        Brenda S. S. Oliveira &bull; Charlotte NC <!-- Character reference -->
+    </footer>
+
+</body>
+</html>

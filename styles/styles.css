@@ -70,11 +70,6 @@ article.intro {
     padding: 20px;
 }
 
-article.intro img {
-	max-width: 20%;
-    height: auto;
-    display: block;
-}
 
 main {
 	clear: both;
@@ -87,15 +82,25 @@ article {
 }
 
 		
+/* Footer */
 footer {
-   background-color: #f6faee;
-   color: #000080; 
-   text-align: center;
-   padding: 10px;
-   display: inline-block;
-   margin-left: 15px;
-   font-weight: bold;
-}
+    text-align: center;
+    margin: 20px auto 0 auto;
+    width: 100%;
+    padding: 10px 0;
+ }
+ 
+ footer img {
+    max-width: 100%;
+    height: auto;
+ }
+ 
+ footer nav ul li {
+     display: inline-block;
+     margin-left: 15px;
+    font-weight: bold;
+  
+ }
 
 /* Styling for links within article.intro */
 a:link {
@@ -156,9 +161,5 @@ a:visited {
 	header {
 	flex: 0 0 20%;
 	max-width: 20%;
-	}
-	footer {
-	flex: 0 0 20%;
-	width: 100%;
 	}
 }

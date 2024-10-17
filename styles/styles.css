@@ -67,6 +67,16 @@ article {
     background-color: #f6faee;
 }
 
+/* Styling for links */
+a:link {
+    color: #000080; /* Link color for unvisited links */
+    text-decoration: none; /* Remove underline */
+}
+
+a:visited {
+    color: #800080; /* Link color for visited links */
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -86,52 +96,45 @@ footer nav ul li {
     font-weight: bold;
 }
 
-/* Styling for links */
-a:link {
-    color: #000080; /* Link color for unvisited links */
-    text-decoration: none; /* Remove underline */
-}
-
-a:visited {
-    color: #800080; /* Link color for visited links */
-}
-
-/* Media query for screens up to 768px */
+/* Responsive Styles */
 @media only screen and (max-width: 768px) {
     header {
-        padding: 10px;
-    }
+       padding: 10px;
+   }
+ 
+   header nav {
+       flex-direction: column;
+   }
+ 
+   header nav ul {
+       display: block; 
+       text-align: center; 
+   }
+   header div {
+    margin-top: 20px;
+   }
+ }
+ 
+ @media only screen and (min-width: 769px) {
     header nav ul {
-        display: none;
+       display: flex;
     }
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
+    header nav {
+       flex-direction: row;
     }
-    article {
-        padding: 10px;
-    }
-}
-
-/* Media query for screens from 769px onwards */
-@media only screen and (min-width: 769px) {
-    header nav ul {
-        display: block;
-    }
-}
-
-/* Media query for screens from 1025px onwards */
-@media only screen and (min-width: 1025px) {
+ }
+ 
+ @media only screen and (min-width: 1025px) {
     body {
-        display: flex;
-        flex-direction: row;
+       margin: 0 auto;
     }
+ 
     header, main, footer {
-        padding: 20px;
-        margin: 0 auto;
+       margin: 0 auto;
+       width: 100%;
     }
-    header {
-        flex: 0 0 20%;
-        max-width: 20%;
+ 
+    main {
+       margin: 10px 0;
     }
-}
+ }

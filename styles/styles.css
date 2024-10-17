@@ -18,6 +18,7 @@ body {
 header {
     overflow: hidden;
     padding: 10px 20px;
+    color: 000080;
 }
 h1 {
     font-size: 2em;
@@ -75,36 +76,25 @@ article.intro img {
     display: block;
 }
 
-article.resume {
+main {
 	clear: both;
 	padding: 10px;
 }
 
 
-article.intro {
-	background-color: #faf5e3;
+article {
+	background-color: #f6faee;
 }
 
-.current-time {
-    text-align: center;
-    font-size: 20px;
-    margin-top: 10px;
-    color: #333;
-	background-color: #faf5e3; 
-}
-
-.countdown {
-    text-align: center;
-    font-size: 20px;
-    margin-top: 10px;
-}
 		
 footer {
-   background-color: #000080;
-   color: white; 
+   background-color: #f6faee;
+   color: #000080; 
    text-align: center;
    padding: 10px;
-   margin-top: 20px;
+   display: inline-block;
+   margin-left: 15px;
+   font-weight: bold;
 }
 
 /* Styling for links within article.intro */
@@ -146,7 +136,7 @@ a:visited {
 	display: block;
 	margin: 10px 0;
 	}
-	article.intro {
+	article {
 	padding: 10px;
 	}
 }
@@ -162,15 +152,15 @@ a:visited {
 	display: flex;
 	flex-direction: row;
 	}
-	header, article, footer {
+	header, main, footer {
 	padding: 20px;
-	margin: 0;
+	margin: 0 auto;
 	}
 	header {
 	flex: 0 0 20%;
 	max-width: 20%;
 	}
-	article.intro {
+	article {
 	flex: 1;
 	margin: 20px;
 	}

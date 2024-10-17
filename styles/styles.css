@@ -108,12 +108,12 @@ footer {
 }
 
 /* Styling for links within article.intro */
-.article.intro a:link {
+a:link {
    color: #000080; /* Link color for unvisited links */
    text-decoration: none; /* Remove underline */
 }
 
-.article.intro a:visited {
+a:visited {
    color: #800080; /* Link color for visited links */
 }
 

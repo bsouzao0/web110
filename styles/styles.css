@@ -49,7 +49,6 @@ header div ul li {
     margin-right: 10px;
 }
 
-
 header nav {
     width: 40%;
     float: right;
@@ -69,7 +68,6 @@ article.intro {
     clear: both;
     padding: 20px;
 }
-
 
 main {
 	clear: both;
@@ -110,20 +108,6 @@ a:link {
 
 a:visited {
    color: #800080; /* Link color for visited links */
-}
-
-/* Grid layout */
-.grid {
-    display: grid;
-    grid-template-columns: 5fr 3fr 3fr 3fr;
-    gap: 0px; 
-}
-
-/* Absolute positioning */
-#absolute {
-    position: absolute;
-    top: 200;
-    width: 100%;
 }
 
 /* Media query for screens up to 768px */

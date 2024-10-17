@@ -166,6 +166,6 @@ a:visited {
 	}
 	footer {
 	flex: 0 0 20%;
-	max-width: 20%;
+	width: 100%;
 	}
 }

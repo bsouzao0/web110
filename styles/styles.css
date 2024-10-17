@@ -160,10 +160,6 @@ a:visited {
 	flex: 0 0 20%;
 	max-width: 20%;
 	}
-	article {
-	flex: 1;
-	margin: 20px;
-	}
 	footer {
 	flex: 0 0 20%;
 	width: 100%;
